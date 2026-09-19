@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="snake.svg" alt="GitHub Snake">
+  <img src="./pacman.svg" width="100%" alt="Animated Pac-Man style contribution graph">
 </p>
