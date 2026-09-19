@@ -1,0 +1,441 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1080"
+     height="200"
+     viewBox="0 0 1080 200">
+
+  <!-- BACKGROUND -->
+  <rect width="1080" height="200" fill="white"/>
+
+  <!-- TOP LINE -->
+  <line x1="5" y1="25" x2="1075" y2="25"
+        stroke="#8b8cff"
+        stroke-width="2"/>
+
+  <!-- MONTHS -->
+  <g font-family="Arial" font-size="9" fill="#57606a">
+    <text x="5" y="45">Sep</text>
+    <text x="73" y="45">Oct</text>
+    <text x="142" y="45">Nov</text>
+    <text x="210" y="45">Dec</text>
+    <text x="278" y="45">Jan</text>
+    <text x="346" y="45">Feb</text>
+    <text x="414" y="45">Mar</text>
+    <text x="482" y="45">Apr</text>
+    <text x="550" y="45">May</text>
+    <text x="618" y="45">Jun</text>
+    <text x="686" y="45">Jul</text>
+    <text x="754" y="45">Aug</text>
+    <text x="822" y="45">Sep</text>
+  </g>
+
+
+  <!-- =============================== -->
+  <!-- CONTRIBUTION GRID -->
+  <!-- =============================== -->
+
+  <defs>
+
+    <pattern id="grid"
+             width="20"
+             height="20"
+             patternUnits="userSpaceOnUse">
+
+      <rect x="1"
+            y="1"
+            width="17"
+            height="17"
+            rx="4"
+            fill="#ebedf0"/>
+
+    </pattern>
+
+  </defs>
+
+  <rect x="5"
+        y="52"
+        width="1070"
+        height="140"
+        fill="url(#grid)"/>
+
+
+  <!-- =============================== -->
+  <!-- GREEN CONTRIBUTIONS -->
+  <!-- =============================== -->
+
+  <g>
+
+    <rect x="125" y="72" width="17" height="17" rx="4" fill="#216e39"/>
+    <rect x="125" y="92" width="17" height="17" rx="4" fill="#30a14e"/>
+    <rect x="145" y="92" width="17" height="17" rx="4" fill="#216e39"/>
+
+    <rect x="65" y="112" width="17" height="17" rx="4" fill="#9be9a8"/>
+    <rect x="85" y="132" width="17" height="17" rx="4" fill="#9be9a8"/>
+    <rect x="105" y="132" width="17" height="17" rx="4" fill="#30a14e"/>
+
+    <rect x="265" y="72" width="17" height="17" rx="4" fill="#9be9a8"/>
+    <rect x="265" y="92" width="17" height="17" rx="4" fill="#9be9a8"/>
+
+    <rect x="405" y="92" width="17" height="17" rx="4" fill="#9be9a8"/>
+    <rect x="405" y="112" width="17" height="17" rx="4" fill="#9be9a8"/>
+
+    <rect x="545" y="72" width="17" height="17" rx="4" fill="#216e39"/>
+    <rect x="545" y="92" width="17" height="17" rx="4" fill="#216e39"/>
+    <rect x="545" y="112" width="17" height="17" rx="4" fill="#216e39"/>
+
+    <rect x="605" y="72" width="17" height="17" rx="4" fill="#30a14e"/>
+    <rect x="625" y="92" width="17" height="17" rx="4" fill="#216e39"/>
+
+    <rect x="805" y="112" width="17" height="17" rx="4" fill="#9be9a8"/>
+    <rect x="825" y="132" width="17" height="17" rx="4" fill="#9be9a8"/>
+
+    <rect x="965" y="92" width="17" height="17" rx="4" fill="#30a14e"/>
+
+  </g>
+
+
+  <!-- ================================================= -->
+  <!-- MAZE WALLS -->
+  <!-- ================================================= -->
+
+  <g
+    fill="none"
+    stroke="#161b22"
+    stroke-width="2"
+    stroke-linecap="square"
+    stroke-linejoin="miter">
+
+    <!-- LEFT SECTION -->
+
+    <path d="M5 72 H45 V112 H85"/>
+
+    <path d="M45 72 V92 H105"/>
+
+    <path d="M105 92 H165 V72 H205"/>
+
+    <path d="M85 132 H125 V112 H165"/>
+
+    <path d="M125 112 V92 H165"/>
+
+    <path d="M165 132 H225 V152 H185"/>
+
+    <path d="M205 72 V52"/>
+
+
+    <!-- SECOND SECTION -->
+
+    <path d="M245 52 V92 H285"/>
+
+    <path d="M285 92 H325 V72 H365"/>
+
+    <path d="M365 52 V112"/>
+
+    <path d="M325 112 H365 V132 H405"/>
+
+    <path d="M405 132 V152 H445"/>
+
+    <path d="M445 92 H485 V72 H525"/>
+
+
+    <!-- CENTER SECTION -->
+
+    <path d="M505 52 V72 H545"/>
+
+    <path d="M545 72 V112 H585"/>
+
+    <path d="M585 92 H625 V72 H665"/>
+
+    <path d="M625 112 V152 H665"/>
+
+    <path d="M665 132 H705 V112 H745"/>
+
+    <path d="M705 52 V92 H745"/>
+
+
+    <!-- RIGHT SECTION -->
+
+    <path d="M765 52 V72 H805 V92 H845"/>
+
+    <path d="M805 72 H905 V112"/>
+
+    <path d="M845 112 H885 V132 H925"/>
+
+    <path d="M905 92 H945 V72 H985"/>
+
+    <path d="M945 112 V152 H985"/>
+
+    <path d="M985 92 H1025 V52"/>
+
+    <path d="M1025 112 H1065"/>
+
+    <path d="M965 152 H1025 V172"/>
+
+  </g>
+
+
+  <!-- ================================================= -->
+  <!-- PAC-MAN ROUTE -->
+  <!--
+       IMPORTANT:
+       This path follows the corridors.
+       The character does NOT cross the maze walls.
+  -->
+  <!-- ================================================= -->
+
+  <defs>
+
+    <path id="pacmanRoute"
+      d="
+      M15 62
+
+      H225
+      V82
+      H165
+      V102
+      H45
+      V122
+      H125
+      V142
+      H225
+
+      H365
+      V122
+      H285
+      V102
+      H365
+      V82
+      H445
+
+      H525
+      V62
+      H665
+      V82
+      H745
+      V102
+      H625
+      V122
+      H705
+      V142
+      H545
+
+      H405
+      V162
+      H245
+      V142
+      H165
+
+      V122
+      H85
+      V102
+      H15
+
+      Z
+      "/>
+
+  </defs>
+
+
+  <!-- ================================================= -->
+  <!-- PAC-MAN -->
+  <!-- ================================================= -->
+
+  <g>
+
+    <g>
+
+      <path
+        fill="#ffd900"
+        d="
+        M0,-10
+        L11,-5
+        A11,11 0 1 1 11,5
+        Z">
+
+        <!-- Mouth -->
+        <animate
+          attributeName="d"
+          dur="0.35s"
+          repeatCount="indefinite"
+          values="
+          M0,-10 L11,-5 A11,11 0 1 1 11,5 Z;
+          M0,-10 L11,-1 A11,11 0 1 1 11,1 Z;
+          M0,-10 L11,-5 A11,11 0 1 1 11,5 Z"/>
+      </path>
+
+      <circle
+        cx="4"
+        cy="-6"
+        r="1.5"
+        fill="#111"/>
+
+      <!-- NORMAL SPEED -->
+      <animateMotion
+        dur="20s"
+        repeatCount="indefinite"
+        rotate="auto"
+        calcMode="paced">
+
+        <mpath href="#pacmanRoute"/>
+
+      </animateMotion>
+
+    </g>
+
+  </g>
+
+
+  <!-- ================================================= -->
+  <!-- RED GHOST -->
+  <!-- ================================================= -->
+
+  <g>
+
+    <path
+      d="
+      M-9,9
+      V-1
+      A9,9 0 0 1 9,-1
+      V9
+      L5,5
+      L1,9
+      L-3,5
+      L-7,9
+      Z"
+      fill="#ff3030"/>
+
+    <circle cx="-4" cy="-1" r="2.5" fill="white"/>
+    <circle cx="4" cy="-1" r="2.5" fill="white"/>
+
+    <circle cx="-3.5" cy="-1" r="1" fill="#111"/>
+    <circle cx="4.5" cy="-1" r="1" fill="#111"/>
+
+    <animateMotion
+      dur="20s"
+      begin="-5s"
+      repeatCount="indefinite"
+      rotate="auto"
+      calcMode="paced">
+
+      <mpath href="#pacmanRoute"/>
+
+    </animateMotion>
+
+  </g>
+
+
+  <!-- ================================================= -->
+  <!-- PINK GHOST -->
+  <!-- ================================================= -->
+
+  <g>
+
+    <path
+      d="
+      M-9,9
+      V-1
+      A9,9 0 0 1 9,-1
+      V9
+      L5,5
+      L1,9
+      L-3,5
+      L-7,9
+      Z"
+      fill="#ff70d9"/>
+
+    <circle cx="-4" cy="-1" r="2.5" fill="white"/>
+    <circle cx="4" cy="-1" r="2.5" fill="white"/>
+
+    <circle cx="-3.5" cy="-1" r="1" fill="#111"/>
+    <circle cx="4.5" cy="-1" r="1" fill="#111"/>
+
+    <animateMotion
+      dur="20s"
+      begin="-10s"
+      repeatCount="indefinite"
+      rotate="auto"
+      calcMode="paced">
+
+      <mpath href="#pacmanRoute"/>
+
+    </animateMotion>
+
+  </g>
+
+
+  <!-- ================================================= -->
+  <!-- ORANGE GHOST -->
+  <!-- ================================================= -->
+
+  <g>
+
+    <path
+      d="
+      M-9,9
+      V-1
+      A9,9 0 0 1 9,-1
+      V9
+      L5,5
+      L1,9
+      L-3,5
+      L-7,9
+      Z"
+      fill="#ff9f1c"/>
+
+    <circle cx="-4" cy="-1" r="2.5" fill="white"/>
+    <circle cx="4" cy="-1" r="2.5" fill="white"/>
+
+    <circle cx="-3.5" cy="-1" r="1" fill="#111"/>
+    <circle cx="4.5" cy="-1" r="1" fill="#111"/>
+
+    <animateMotion
+      dur="20s"
+      begin="-13s"
+      repeatCount="indefinite"
+      rotate="auto"
+      calcMode="paced">
+
+      <mpath href="#pacmanRoute"/>
+
+    </animateMotion>
+
+  </g>
+
+
+  <!-- ================================================= -->
+  <!-- CYAN GHOST -->
+  <!-- ================================================= -->
+
+  <g>
+
+    <path
+      d="
+      M-9,9
+      V-1
+      A9,9 0 0 1 9,-1
+      V9
+      L5,5
+      L1,9
+      L-3,5
+      L-7,9
+      Z"
+      fill="#00cfff"/>
+
+    <circle cx="-4" cy="-1" r="2.5" fill="white"/>
+    <circle cx="4" cy="-1" r="2.5" fill="white"/>
+
+    <circle cx="-3.5" cy="-1" r="1" fill="#111"/>
+    <circle cx="4.5" cy="-1" r="1" fill="#111"/>
+
+    <animateMotion
+      dur="20s"
+      begin="-16s"
+      repeatCount="indefinite"
+      rotate="auto"
+      calcMode="paced">
+
+      <mpath href="#pacmanRoute"/>
+
+    </animateMotion>
+
+  </g>
+
+</svg>
