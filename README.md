@@ -1,4 +1,4 @@
 ##  
 
-![Pac-Man](https://raw.githubusercontent.com/trinidadarronnn/pacman-contribution-graph/output/pacman-contribution-graph.svg)
+![Pac-Man](https://raw.githubusercontent.com/trinidadarronnn/pacman-contribution-graph-dark.svg)
 -->
